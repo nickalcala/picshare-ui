@@ -1,0 +1,18 @@
+<h1 class="lead"
+    *ngIf="pictures.length == 0 && !isLoading">No pictures.</h1>
+<p class="text-center"
+   *ngIf="isLoading">
+    Loading
+</p>
+<div class="col-sm-4 offset-sm-4">
+    <div class="card mb-3"
+         *ngFor="let pic of pictures;">
+        <img class="card-img-top"
+             [src]="mediaUrl + '/' + pic.filename"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ pic.title }}</h5>
+            <p class="card-text">{{ pic.description }}</p>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiEndpoint: 'http://picshare.test',
+  mediaEndpoint: 'http://picshare.test/pictures',
 };
